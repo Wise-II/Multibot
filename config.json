@@ -1,0 +1,7 @@
+{
+	"prefix": "m?",
+	"token": "NzM3NDM2NDQ4MTM0NzkxMjgy.Xx9VNg.P1BYkdug4mK4n5uPThxri1e2D9w",
+	"nodes": [
+	{ "host": "localhost", "port": 7777, "password": "youshallnotpass" }
+  ] 
+}

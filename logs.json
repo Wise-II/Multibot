@@ -1,0 +1,3 @@
+{
+    "Logs": "audit => audit.entries.first()"
+}
