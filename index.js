@@ -61,7 +61,7 @@ message.channel.send('Prefix is: `m?`')
 
 
 client.on('messageDelete', message => {
-  const channel1 = message.member.guild.channels.cache.find(ch => ch.name === 'modlog');
+  const channel1 = message.member.guild.channels.cache.find(ch => ch.name === 'modlog', 'mod-log');
   if (!channel1) return;
   const user = message.author;
   console.log(`${message.id} was deleted!`);
