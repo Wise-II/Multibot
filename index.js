@@ -57,7 +57,7 @@ const activities_list = [
   "i don't understand how a woman works -mario_time 2021",
   "sudo delete your existence.exe",
   "shush, you dont know shet"
-  
+
 
   ]; // creates an arraylist containing phrases you want your bot to switch through.
 
@@ -67,7 +67,7 @@ client.on('ready', () => {
 });
 client.on('message', message => {
 if (message.mentions.has(client.user)) {
-message.channel.send('Prefix is: `m?`')
+message.channel.send('Prefix is: `m.`')
 }
 });
 
@@ -82,7 +82,7 @@ client.on('messageDelete', message => {
   .addField('in channel', message.channel)
   .addField('User', `${message.author}`)
   .addField('Content in message', "`" + "``asciidoc\n" + `[${message.content}]` + "\n`" + "``")
-  .setFooter('MiataBot -> Loggging, Deleted Messages')
+  .setFooter('HobbyBot -> Loggging, Deleted Messages')
   .setTimestamp()
   .setColor('#8B0000')
   .setThumbnail(user.displayAvatarURL({ dynamic:true }))
