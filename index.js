@@ -63,7 +63,7 @@ const activities_list = [
 
 client.on('ready', () => {
   
-      client.user.setActivity(activities_list) 
+      client.user.setActivity("im spinnin on deez percs like a laundromat") 
 });
 client.on('message', message => {
 if (message.mentions.has(client.user)) {
@@ -82,7 +82,7 @@ client.on('messageDelete', message => {
   .addField('in channel', message.channel)
   .addField('User', `${message.author}`)
   .addField('Content in message', "`" + "``asciidoc\n" + `[${message.content}]` + "\n`" + "``")
-  .setFooter('HobbyBot -> Loggging, Deleted Messages')
+  .setFooter('Multibot -> Loggging, Deleted Messages')
   .setTimestamp()
   .setColor('#8B0000')
   .setThumbnail(user.displayAvatarURL({ dynamic:true }))
