@@ -1,23 +1,22 @@
-const fs = require('fs');
-const Discord = require('discord.js');
-const { token } = require('./config.json');
+const fs = import('fs');
+const Discord = import('discord.js');
+const { token } = import('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const { Command } = require('@adonisjs/ace')
-const chalk = require('chalk');
-const moment = require('moment');
-const sql = require('sqlite');
-const ytdl = require("ytdl-core");
+const chalk = import('chalk');
+const moment = import('moment');
+const sql = import('sqlite');
 const queue = new Map();
 const bot = new Discord.Client();
-const handler = require('@tomdev/discord.js-command-handler')
-const { ErelaClient, Utils } = require("erela.js");
-const { Color, green, magenta, blue } = require('chalk');
-const { orange } = require('color-name');
+const handler = import('@tomdev/discord.js-command-handler')
+const { ErelaClient, Utils } = import("erela.js");
+const { Color, green, magenta, blue } = import('chalk');
+const { orange } = import('color-name');
 var prefix = "m?"
-let sleep = require('js-sleepms');
+let sleep = import('js-sleepms');
 
-const wait = require('waait');
+const wait = import('waait');
 client.on('ready', (ready) => { 
   console.log(chalk.blueBright(`
   
