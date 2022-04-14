@@ -1,6 +1,6 @@
 const fs = import('fs');
 const Discord = import('discord.js');
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
 const { token } = import('./config.json');
 client.commands = new Discord.Collection();
 const { Command } = require('@adonisjs/ace')
