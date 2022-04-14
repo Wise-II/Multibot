@@ -1,11 +1,12 @@
 const fs = import('fs');
 const Discord = import('discord.js');
-const { token } = import('./config.json');
 const client = new Discord.Client();
+const { token } = import('./config.json');
 client.commands = new Discord.Collection();
 const { Command } = require('@adonisjs/ace')
 const chalk = import('chalk');
-const moment = import('moment');
+const newLocal = import('moment');
+const moment = newLocal;
 const sql = import('sqlite');
 const queue = new Map();
 const bot = new Discord.Client();
