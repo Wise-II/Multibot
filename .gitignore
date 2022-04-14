@@ -1,1 +1,5 @@
 node_modules
+*.sqlite
+.vs/VSWorkspaceState.json
+.vs/Multibot/v17/.suo
+.vs/ProjectSettings.json

@@ -45,25 +45,10 @@ var cmdhandler = new handler(client, "/commands", prefix)
 client.on("message", (message) => {
     cmdhandler.handleCommand(message)
 })
-const activities_list = [
-  "Online...Why do i exist", 
-  "High....",
-  "BEEP BEEP SKEBOP",
-  "50,000$ later,",
-  "Th33Kha0s eating a BeastBurger is the funniest thing i saw",
-  "Deez Nutz Innit",
-  "NYOOOOOOOOOOOOOOOM",
-  "AAAAAAAAAAAAAH A SPIDERRRRRR!",
-  "i don't understand how a woman works -mario_time 2021",
-  "sudo delete your existence.exe",
-  "shush, you dont know shet"
-
-
-  ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
   
-      client.user.setActivity("im spinnin on deez percs like a laundromat") 
+      client.user.setActivity("Working, dont bother me lol") 
 });
 client.on('message', message => {
 if (message.mentions.has(client.user)) {
