@@ -1,8 +1,9 @@
+ // - imports all of the modules required to start the bot
 const fs = import('fs');
-const Discord = import('discord.js');
+const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
 const { token } = import('./config.json');
-client.commands = new Discord.Collection();
+client.commands = new discord.Collection();
 const { Command } = require('@adonisjs/ace')
 const chalk = import('chalk');
 const newLocal = import('moment');
@@ -45,18 +46,18 @@ var cmdhandler = new handler(client, "/commands", prefix)
 client.on("message", (message) => {
     cmdhandler.handleCommand(message)
 })
-
+// console logging, command handler syntaxes
 client.on('ready', () => {
   
-      client.user.setActivity("Working, dont bother me lol") 
+      client.user.setActivity("ur mum") 
 });
 client.on('message', message => {
 if (message.mentions.has(client.user)) {
-message.channel.send('Prefix is: `m.`')
+message.channel.send("Prefix is: `m?`")
 }
 });
-
-
+ // bot user activity, prefix message
+ // message delete logging module below
 client.on('messageDelete', message => {
   const channel1 = message.member.guild.channels.cache.find(ch => ch.name === 'modlog', 'mod-log');
   if (!channel1) return;
@@ -67,10 +68,10 @@ client.on('messageDelete', message => {
   .addField('in channel', message.channel)
   .addField('User', `${message.author}`)
   .addField('Content in message', "`" + "``asciidoc\n" + `[${message.content}]` + "\n`" + "``")
-  .setFooter('Multibot -> Loggging, Deleted Messages')
+  .setFooter('AlteredBot -> Loggging, Deleted Messages')
   .setTimestamp()
   .setColor('#8B0000')
-  .setThumbnail(user.displayAvatarURL({ dynamic:true }))
+  .setThumbnail(user.displayAvatarURL({ dynamic:false  }))
 channel1.send(messageDelete)
   // Partial messages do not contain any content so skip them
   if (!message.partial) {

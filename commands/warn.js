@@ -14,15 +14,6 @@ module.exports = {
   usage: ".jswarn @user",
 	run: async function (client, command, args, message) {
 
-    let blacklist = new Discord.MessageEmbed()
-    .setColor("#e31212")
-    .setDescription(
-      "ERROR: You are blacklisted in the database by the owner from using this command."
-    );
-  var blacklistarray =["819173352760803367", "", "", ""];// ID or ID(s) of user you wish to blacklist here
-  if (blacklistarray.includes(message.author.id))
-    return message.channel.send(blacklist);
-  
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return;
         try {
             ++myVar;
