@@ -1,26 +1,22 @@
  // - imports all of the modules required to start the bot
 const fs = import('fs');
-const { Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
-const { token } = import('./config.json');
-client.commands = new discord.Collection();
+const { token } = "./config.json";
+const { Client, Collection,Intents } = require('discord.js');
+ const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
+const discord = require('discord.js');
+client.commands = new Collection();
 const { Command } = require('@adonisjs/ace')
 const chalk = import('chalk');
 const newLocal = import('moment');
 const moment = newLocal;
 const sql = import('sqlite');
 const queue = new Map();
-const bot = new Discord.Client();
-const handler = import('@tomdev/discord.js-command-handler')
 const { ErelaClient, Utils } = import("erela.js");
-const { Color, green, magenta, blue } = import('chalk');
-const { orange } = import('color-name');
-var prefix = "m?"
 let sleep = import('js-sleepms');
 
 const wait = import('waait');
 client.on('ready', (ready) => { 
-  console.log(chalk.blueBright(`
+  console.log(`
   
   ███╗   ███╗██████╗
   ████╗ ████║██╔══██╗
@@ -30,26 +26,20 @@ client.on('ready', (ready) => {
   ╚═╝     ╚═╝╚═════╝
                                                
                                                                                                        
-                                                                                          `));
+                                                                                          `);
                                                                                     
                                                                                         console.time('sleep')
                                                                                         setTimeout(() => { console.timeEnd('sleep') }, 100) 
                                                                                         
-console.log(chalk.yellow("Executing Core files.."));
-sleep.SleepMS(5000);
-console.log(chalk.blue("Connecting to Websocket/APIs"));
-sleep.SleepMS(5000);
-console.log(chalk.magenta("Client Has Booted."));
-sleep.SleepMS(5000);
-})
-var cmdhandler = new handler(client, "/commands", prefix)
-client.on("message", (message) => {
-    cmdhandler.handleCommand(message)
+console.log("Executing Core files..");
+console.log("Connecting to Websocket/APIs");
+console.log("Client Has Booted.");
+
 })
 // console logging, command handler syntaxes
 client.on('ready', () => {
   
-      client.user.setActivity("ur mum") 
+      client.user.setActivity("With your feelings|| M!") 
 });
 client.on('message', message => {
 if (message.mentions.has(client.user)) {
@@ -59,7 +49,7 @@ message.channel.send("Prefix is: `m?`")
  // bot user activity, prefix message
  // message delete logging module below
 client.on('messageDelete', message => {
-  const channel1 = message.member.guild.channels.cache.find(ch => ch.name === 'modlog', 'mod-log');
+  const channel1 = message.member.guild.channels.cache.find(ch => ch.name === 'modlog', 'mod-log','〔📁〕logs');
   if (!channel1) return;
   const user = message.author;
   console.log(`${message.id} was deleted!`);
