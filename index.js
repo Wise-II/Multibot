@@ -16,7 +16,6 @@ let sleep = import('js-sleepms');
 // this is the prefix
 var prefix = 'm!'
 //end prefix line
-const chalk = import('chalk');
 var handler = require("@tomdev/discord.js-command-handler")
 var cmdhandler = new handler(client, "/commands", prefix)
 const wait = import('waait');
