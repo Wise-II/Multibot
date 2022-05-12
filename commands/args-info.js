@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+const chalk = import('chalk');
 args: true,
 module.exports = {
 	name: 'args-info',

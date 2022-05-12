@@ -1,12 +1,12 @@
 
 const { DiscordAPIError } = require("discord.js");
 const { format } = require("path");
-const chalk = require('chalk');
-const Discord = require('discord.js');
+const chalk = import('chalk');
+const Discord = import('discord.js');
 const client = new Discord.Client();
 const dynamic = new Discord.Client();
-const fs = require('fs');
-var memory = require("memory");
+const fs = import('fs');
+var memory = import("memory");
 module.exports = {
 	name: 'auditlogs',
 	aliases: ["auditlogs", "display-logs"],

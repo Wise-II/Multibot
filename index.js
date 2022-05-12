@@ -2,7 +2,7 @@
 const fs = import('fs');
 const { token } = "./config.json";
 const { Client, Collection,Intents } = require('discord.js');
- const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
+const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
 const discord = require('discord.js');
 client.commands = new Collection();
 const { Command } = require('@adonisjs/ace')
@@ -13,10 +13,15 @@ const sql = import('sqlite');
 const queue = new Map();
 const { ErelaClient, Utils } = import("erela.js");
 let sleep = import('js-sleepms');
-
+// this is the prefix
+var prefix = 'm!'
+//end prefix line
+const chalk = import('chalk');
+var handler = require("@tomdev/discord.js-command-handler")
+var cmdhandler = new handler(client, "/commands", prefix)
 const wait = import('waait');
 client.on('ready', (ready) => { 
-  console.log(`
+  console.log(chalk.blue(`
   
   ███╗   ███╗██████╗
   ████╗ ████║██╔══██╗
@@ -26,14 +31,17 @@ client.on('ready', (ready) => {
   ╚═╝     ╚═╝╚═════╝
                                                
                                                                                                        
-                                                                                          `);
+                                                                                          `));
                                                                                     
                                                                                         console.time('sleep')
                                                                                         setTimeout(() => { console.timeEnd('sleep') }, 100) 
                                                                                         
-console.log("Executing Core files..");
-console.log("Connecting to Websocket/APIs");
-console.log("Client Has Booted.");
+    console.log("Executing Core files..");
+    sleep.SleepMS(5000);
+    console.log("Connecting to Websocket/APIs");
+    sleep.SleepMS(5000);
+    console.log("Client Has Booted.");
+    sleep.SleepMS(5000);
 
 })
 // console logging, command handler syntaxes
