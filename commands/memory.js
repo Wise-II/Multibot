@@ -1,11 +1,11 @@
 
-const { DiscordAPIError } = require("discord.js");
-const { format } = require("path");
-const chalk = require('chalk');
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const fs = require('fs');
-var memory = require("memory");
+const { DiscordAPIError } = import("discord.js");
+const { format } = import("path");
+const chalk = import('chalk');
+const Discord = import('discord.js');
+//const client = new discord.client();
+const fs = import('fs');
+var memory = import("memory");
 module.exports = {
 	name: 'memory-usage',
 	aliases: ["memory", "mem"],

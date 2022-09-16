@@ -1,8 +1,8 @@
  // - imports all of the modules required to start the bot
 const fs = import('fs');
 const { token } = "./config.json";
-const { Client, Collection,Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const discord = require('discord.js');
 client.commands = new Collection();
 const { Command } = require('@adonisjs/ace')

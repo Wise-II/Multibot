@@ -1,9 +1,9 @@
-const { DiscordAPIError } = require("discord.js");
-const { format } = require("path");
-const chalk = require('chalk');
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const ms = require("ms");
+const { DiscordAPIError } = import("discord.js");
+const { format } = import("path");
+const chalk = import('chalk');
+const Discord = import('discord.js');
+const { Client } = require("discord.js")
+const ms = import("ms");
 const PREFIX = '.js';
 module.exports = {
 	name: 'mute',
